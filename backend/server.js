@@ -7,6 +7,10 @@ const authRoutes = require('./routes/authRoutes');
 
 dotenv.config();
 
+if (!process.env.JWT_SECRET) {
+  process.env.JWT_SECRET = 'temporary_secret_key_for_local_testing';
+}
+
 // Connect to Database
 connectDB();
 
