@@ -60,14 +60,14 @@ You will need two terminals running simultaneously.
 ```bash
 cd backend
 npm run dev
-# Server will run on http://localhost:5000
+# Server will run on import.meta.env.VITE_API_URL
 ```
 
 **Terminal 2 (Frontend):**
 ```bash
 cd frontend
 npm run dev
-# App will run on http://localhost:5173
+# App will run on import.meta.env.VITE_API_URL
 ```
 
 ---
@@ -91,5 +91,5 @@ npm run dev
 1. Go to Vercel.com and create a new Project.
 2. Connect your repo. Set the Framework Preset to "Vite".
 3. Set the Root Directory to `frontend`.
-4. Ensure you set an environment variable for the backend API URL (e.g., `VITE_API_URL`) so Axios points to your live Render backend instead of localhost.
+4. Ensure you set an environment variable for the backend API URL (e.g., `VITE_API_URL`) so Axios points to your live Render backend instead of import.meta.env.VITE_API_URL
 5. Click Deploy!
